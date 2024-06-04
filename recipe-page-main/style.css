@@ -14,7 +14,7 @@
     box-sizing: border-box;
     font-family: "Outfit", sans-serif;
     font-weight: 400;
-    color: var(--dark-charcoal)
+    color: var(--wenge-brown)
 }
 
 @font-face {
@@ -36,20 +36,25 @@ body {
 main {
     max-width: 700px;
     width: 100%;
-    margin: auto;
     background-color: var(--white);
-    padding: 2rem;
+    border-radius: 1rem;
+    margin: 2rem auto;
+    padding: 2rem 0;
+}
+
+.img-container, .text-container {
+    padding: 0rem 2rem;
 }
 
 img {
     width: 100%;
     border-radius: 1rem;
-    margin: 1rem auto;
 }
 
 h1, h2 {
     font-family: "Young Serif", serif;    
     font-weight: 400;
+    margin: 1rem 0rem;
 }
 
 h2 {
@@ -59,10 +64,11 @@ h2 {
 h3 {
     color: var(--dark-raspberry);
     font-weight: 600;
+    margin: 0;
 }
 
 section {
-    margin: 2rem 1rem;
+    margin: 2rem 0rem;
 }
 
 .preparation {
@@ -79,6 +85,14 @@ section li::marker {
 .preparation li::marker {
     color: var(--dark-raspberry);
     font-weight: bold;
+}
+
+.ingredients, .instructions {
+    border-bottom: .1rem solid var(--light-grey);
+}
+
+ul, ol {
+    margin-left: -1rem;
 }
 
 li {
@@ -108,4 +122,22 @@ table tr:last-of-type td {
 table td:nth-child(2) {
     font-weight: bold;
     color: var(--nutmeg);
+}
+
+.nutrition {
+    margin-bottom: 0;
+}
+
+@media (max-width: 375px) {
+    main {
+        margin: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .img-container, img {
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+    }
 }
